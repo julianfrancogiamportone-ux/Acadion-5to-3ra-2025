@@ -1,4 +1,4 @@
-package com.acadion.examen.controller;
+package com.acadion.materia.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,23 +17,30 @@ import com.acadion.examen.entity.alumno;
 
 
 @RestController
-@RequestMapping("/api/alumnos")
-@CrossOrigin(origins = "*")
+@RequestMapping("/api/materia")
+@CrossOrigin("*")
 public class alumnocontroller {
 
-	@Autowired
-	private Ialumnoservice pService;
-	
-	@GetMapping
-	public List<alumno> getAllCharacters(){
-		return pService.findAllCharacters();
-	}
-	@GetMapping("/alumno/{id}")
-	public Optional<alumno> getCharactersById(@PathVariable Long id){
-		return pService.findCharacterById(id);
-	}
-	@PostMapping
-	public alumno createCharacter(@RequestBody alumno alumno) {
-		return pService.saveCharacter(alumno);
-	}
+    @Autowired
+    private IMateriaService service;
+
+    @GetMapping("/listar")
+    public List<Materia> listar() {
+        return service.listar();
+    }
+
+    @GetMapping("/listar/{id}")
+    public Optional<Materia> listarId(@PathVariable Long id) {
+        return service.listarId(id);
+    }
+
+    @PostMapping("/guardar")
+    public int save(@RequestBody Materia m) {
+        return service.save(m);
+    }
+
+    @DeleteMapping("/eliminar/{id}")
+    public void delete(@PathVariable Long id) {
+        service.delete(id);
+    }
 }
