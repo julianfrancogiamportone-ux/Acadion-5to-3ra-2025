@@ -1,13 +1,13 @@
-package com.acadion.examen;
+package com.acadion.materia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ExamenApplication {
+public class MateriaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ExamenApplication.class, args);
+		SpringApplication.run(MateriaApplication.class, args);
 	}
 
 }
