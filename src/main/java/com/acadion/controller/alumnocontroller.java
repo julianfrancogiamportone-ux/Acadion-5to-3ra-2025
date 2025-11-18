@@ -1,4 +1,4 @@
-package com.acadion.examen.controller;
+package com.acadion.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,29 +11,29 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.acadion.examen.Iservice.Iexamenservice;
-import com.acadion.examen.entity.examen;
+import com.acadion.Iservice.Ialumnoservice;
+import com.acadion.entity.alumno;
 
 
 
 @RestController
-@RequestMapping("/api/examen")
+@RequestMapping("/api/alumnos")
 @CrossOrigin(origins = "*")
-public class examencontroller {
+public class alumnocontroller {
 
 	@Autowired
-	private Iexamenservice pService;
+	private Ialumnoservice pService;
 	
 	@GetMapping
-	public List<examen> getAllCharacters(){
+	public List<alumno> getAllCharacters(){
 		return pService.findAllCharacters();
 	}
-	@GetMapping("/examen/{id}")
-	public Optional<examen> getCharactersById(@PathVariable Long id){
+	@GetMapping("/alumno/{id}")
+	public Optional<alumno> getCharactersById(@PathVariable Long id){
 		return pService.findCharacterById(id);
 	}
 	@PostMapping
-	public examen createCharacter(@RequestBody examen examen) {
-		return pService.saveCharacter(examen);
+	public alumno createCharacter(@RequestBody alumno alumno) {
+		return pService.saveCharacter(alumno);
 	}
 }

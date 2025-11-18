@@ -1,4 +1,4 @@
-package com.acadion.examen.service;
+package com.acadion.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,9 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.acadion.examen.Iservice.Iexamenservice;
-import com.acadion.examen.entity.examen;
-import com.acadion.examen.repository.examenrepository;
+import com.acadion.Iservice.Iexamenservice;
+import com.acadion.entity.examen;
+import com.acadion.repository.examenrepository;
 
 @Service
 public class examenservice implements Iexamenservice {
