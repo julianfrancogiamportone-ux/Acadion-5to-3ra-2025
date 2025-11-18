@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.acadion</groupId>
-	<artifactId>examen</artifactId>
+	<artifactId>acadion</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>examen</name>
+	<name>acadion</name>
 	<description>Aplicacion web sobre examenes academicos</description>
 	<url/>
 	<licenses>

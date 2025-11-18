@@ -1,4 +1,4 @@
-package com.acadion.examen.entity;
+package com.acadion.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

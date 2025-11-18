@@ -1,9 +1,9 @@
-package com.acadion.examen.Iservice;
+package com.acadion.Iservice;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.acadion.examen.entity.examen;
+import com.acadion.entity.examen;
 
 
 public interface Iexamenservice {
